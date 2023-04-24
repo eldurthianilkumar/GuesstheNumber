@@ -14,29 +14,29 @@ document.querySelector(".check").addEventListener("click", function () {
   if (!guessNO) {
     messageFun("No Input");
   } else if (guessNO == randomNum) {
-    messageFun("Correct guess kotavu ra babu");
+    messageFun("Correct guess");
     document.querySelector(".number").textContent = randomNum;
     if (score > highScore) {
       document.querySelector(".highscore").textContent = score;
     }
   } else if (guessNO > randomNum) {
     if (score > 1) {
-      messageFun("Too much ra babu !!");
+      messageFun("Too much!!");
       score--;
       document.querySelector(".score").textContent = score;
     } else {
       document.querySelector(".message").textContent =
-        "You lost the game ra babu!";
+        "You lost the game!";
       document.querySelector(".score").textContent = 0;
     }
   } else if (guessNO < randomNum) {
     if (score > 1) {
-      messageFun("Too Low ra babu!!");
+      messageFun("Too Low!!");
       score--;
       document.querySelector(".score").textContent = score;
     } else {
       document.querySelector(".message").textContent =
-        "You lost the game ra babu!";
+        "You lost the game!";
       document.querySelector(".score").textContent = 0;
     }
   }
